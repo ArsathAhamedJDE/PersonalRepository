@@ -15,8 +15,10 @@ public class AccountTriggerHandler implements TriggerHandlerInterface{
        
     }
     
-    // Commeting the beforeDelete handler, as there is no dependent functionality and not in scope for Phase 1.
-    public void beforeDelete(Map<Id, SObject> oldItems) {}
+    
+    public void beforeDelete(Map<Id, SObject> oldItems) {
+    
+    }
     
     public void afterInsert(Map<Id, SObject> newItems) {
          AccountRevenueCalculator.AnnualRevenueRollUpInsert(newItems);           
@@ -26,9 +28,13 @@ public class AccountTriggerHandler implements TriggerHandlerInterface{
         AccountRevenueCalculator.AnnualRevenueRollUpUpdate(newItems, oldItems);          
     }
     
-    // Commeting the afterDelete,afterUndelete handler, as there is no dependent functionality and not in scope for Phase 1.
-    public void afterDelete(Map<Id, SObject> oldItems) {}
     
-    public void afterUndelete(Map<Id, SObject> oldItems) {}
+    public void afterDelete(Map<Id, SObject> oldItems) {
+    
+    }
+    
+    public void afterUndelete(Map<Id, SObject> oldItems) {
+    
+    }
     
 }
